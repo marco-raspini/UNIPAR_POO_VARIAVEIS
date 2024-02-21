@@ -38,3 +38,17 @@ class Atividade {
 
 // ATIVIDADE 03
 
+
+
+// ATIVIDADE 04
+
+public class ControleEstoque {
+    public static void main(String[] args) {
+        // Declaração das variáveis aqui
+        String nomeProduto;
+        String categoriaProduto;
+        boolean precoProduto;
+        Integer qtddEstoque;
+    }
+
+
