@@ -1,4 +1,6 @@
 
+// ATIVIDADES DE JAVA
+
 // ATIVIDADES 01
 
 class Atividade {
@@ -14,7 +16,6 @@ class Atividade {
     short descontoPromocional = 25; 
     String localArmazenado = "Cidade x";
     long cepEnvioDestino = 85603780;
-    
     }
 }
 
@@ -37,7 +38,6 @@ class Atividade {
 }
 
 // ATIVIDADE 03
-
 
 public class ControleEstoque {
     public static void main(String[] args) {
@@ -64,7 +64,6 @@ public class ControleEstoque {
         System.out.println("Media: " + mediaNotas);
     }
 }
-
 
 // ATIVIDADE 04
 
