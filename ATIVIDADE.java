@@ -80,7 +80,62 @@ public class ControleEstoque {
 
 // ATIVIDADE 05
 
+public class ControleEstoque {
+    public static void main(String[] args) {
+    
+        String nomeSmartphone;
+        double precoSmartphone;
+        int quantidadeSmartphone;
+        String marcaSmartphone;
 
+        String nomeLaptop;
+        double precoLaptop;
+        int quantidadeLaptop;
+        String marcaLaptop;
+        
+        String nomeFone;
+        double precoFone;
+        int quantidadeFone;
+        String marcaFone;
+
+        nomeSmartphone = "Galaxy S23 Ultra";
+        precoSmartphone = 5.000;
+        quantidadeSmartphone = 50;
+        marcaSmartphone = "Samsung";
+
+        nomeLaptop = "Alienware";
+        precoLaptop = 35.000;
+        quantidadeLaptop = 12;
+        marcaLaptop = "Dell";
+
+        nomeFone = "Cloud Revolver";
+        precoFone = 520.00;
+        quantidadeFone = 100;
+        marcaFone = "HyperX";
+
+        System.out.println("- - - - - - - - - - - - - - - -");
+        System.out.println("- Dados do Produto Cadastrado -");
+        System.out.println("- - - - - - - - - - - - - - - -");
+        
+        System.out.println("");
+        System.out.println("Nome: " + nomeSmartphone);
+        System.out.println("Marca: " + marcaSmartphone);
+        System.out.println("Preco: R$" + precoSmartphone);
+        System.out.println("Quantidade em estoque: " + quantidadeSmartphone);
+        
+        System.out.println("");
+        System.out.println("Nome: " + nomeLaptop);
+        System.out.println("Marca: " + marcaLaptop);
+        System.out.println("Preco: R$" + precoLaptop);
+        System.out.println("Quantidade em estoque: " + quantidadeLaptop);
+        
+        System.out.println("");
+        System.out.println("Nome: " + nomeFone);
+        System.out.println("Marca: " + marcaFone);
+        System.out.println("Preco: R$" + precoFone);
+        System.out.println("Quantidade em estoque: " + quantidadeFone);
+    }
+}
 
 // ATIVIDADE 06
 
