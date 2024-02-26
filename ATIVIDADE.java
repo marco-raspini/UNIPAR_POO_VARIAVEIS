@@ -39,6 +39,32 @@ class Atividade {
 // ATIVIDADE 03
 
 
+public class ControleEstoque {
+    public static void main(String[] args) {
+     
+        String nomeAluno;
+        int idadeAluno;
+        double notaPrimeira;
+        double notaSegunda;
+        double mediaNotas;
+        
+        nomeAluno = "Marco";
+        idadeAluno = 21;
+        notaPrimeira = 8.5;
+        notaSegunda = 9.0;
+
+        mediaNotas = ((notaPrimeira + notaSegunda)/2);
+
+        System.out.println("- - - - - - - - -");
+        System.out.println("- Media do aluno -");
+        System.out.println("- - - - - - - - -");
+        System.out.println("");
+        System.out.println("Nome: " + nomeAluno);
+        System.out.println("Idade: " + idadeAluno);
+        System.out.println("Media: " + mediaNotas);
+    }
+}
+
 
 // ATIVIDADE 04
 
@@ -86,8 +112,7 @@ public class ControleEstoque {
         double precoProduto;
         int quantidadeProduto;
         String marcaProduto;
-        
-        
+
         nomeProduto = "12345";
         precoProduto = 29.99;
         quantidadeProduto = 10;
