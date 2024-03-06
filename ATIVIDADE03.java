@@ -169,7 +169,35 @@ class HelloWorld {
 
 // ATIVIDADE 6
 
+import java.util.Scanner;
 
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        String nomeProduto;
+        int precoProduto = 0;
+        int desconto = 0;
+        double precoDesconto = 0;
+        double precoFinal = 0;
+        int media = 0;
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Informe o nome, o preco e o valor de desconto do produto:");
+        nomeProduto = scanner.next();
+        precoProduto = scanner.nextInt();
+        desconto = scanner.nextInt();
+        
+        scanner.close();
+        
+        precoDesconto = ((desconto*0.01) * precoProduto);
+        precoFinal = (precoProduto - precoDesconto);
+
+        System.out.println("");
+        System.out.println("Nome do produto: " + nomeProduto);
+        System.out.println("Preco Final: " + precoFinal);
+    }
+}
 
 
 
