@@ -18,4 +18,35 @@ class ProgramaFizzBuzz {
     }
 }
 
+// ATIVIDADE 02
+
+import java.util.Scanner;
+
+class ProgramaIdadeEmDias {
+    public static void main(String[] args) {
+        
+        int anos;
+        int meses;
+        int dias;
+        int diasBase = 1;
+        int mesBase  = 30;
+        int anoBase  = 365;
+        
+        
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Informe a idade em anos: ");
+        anos = scanner.nextInt();
+        
+        System.out.println("Informe quantos meses: ");
+        meses = scanner.nextInt();
+        
+        System.out.println("Informe os dias: ");
+        dias = scanner.nextInt();
+        
+        scanner.close();
+        
+    }
+}
 
