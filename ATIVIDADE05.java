@@ -130,3 +130,74 @@ class ContaNumeros {
     System.out.println(maiorCem);
     System.out.println(maiorDuz);
 }
+
+// ATIVIDADE 05
+
+package br.unipar;
+
+import java.util.Scanner;
+
+
+class Carro {
+
+    String marca;
+    String modelo;
+    int kilometragem;
+
+    public void criandoCarro() {
+        System.out.println("Carro criado");
+    }
+
+    public void marcaVeiculo(String marca) {
+        this.marca = marca;
+    }
+
+    public void modeloVeiculo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void kilometragemCarro(int kilometragem) {
+        this.kilometragem = kilometragem;
+    }
+}
+
+public class CarroTeste {
+    public static void main(String[] args) {
+
+        String marcaCarro;
+        String modeloCarro;
+        int kilometragemCarro;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Informe a marca do veiculo:  ");
+        marcaCarro = scanner.next();
+        System.out.println();
+
+        System.out.println("Informe o modelo do veiculo:  ");
+        modeloCarro = scanner.next();
+        System.out.println();
+
+        System.out.println("Informe a kilometragem do veiculo:  ");
+        kilometragemCarro = scanner.nextInt();
+        System.out.println();
+
+        scanner.close();
+
+        Carro carroTeste = new Carro();
+
+        carroTeste.criandoCarro();
+        carroTeste.marcaVeiculo(marcaCarro);
+        carroTeste.modeloVeiculo(modeloCarro);
+        carroTeste.kilometragemCarro(kilometragemCarro);
+
+        System.out.println();
+
+        System.out.println(carroTeste);
+        System.out.println(carroTeste.marca);
+        System.out.println(carroTeste.modelo);
+        System.out.println(carroTeste.kilometragem);
+
+        System.out.printf("O veículo cadastrado é um %s modelo %s com um quantidade de %s KM rodados", carroTeste.marca, carroTeste.modelo, carroTeste.kilometragem);
+    }
+}
