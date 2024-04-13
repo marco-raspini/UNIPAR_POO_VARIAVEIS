@@ -18,6 +18,8 @@ class ProgramaFizzBuzz {
     }
 }
 
+//------------------------------------------------------------------------------------------------------------------
+
 // ATIVIDADE 02
 
 import java.util.Scanner;
@@ -59,6 +61,8 @@ class PatinhosDaXuxa {
     }
 }
 
+//------------------------------------------------------------------------------------------------------------------
+
 // ATIVIDADE 03
 
 import java.util.Scanner;
@@ -89,6 +93,8 @@ class ProgramaIdadeEmDias {
         scanner.close();
     }
 }
+
+//------------------------------------------------------------------------------------------------------------------
 
 // ATIVIDADE 04
 
@@ -131,12 +137,12 @@ class ContaNumeros {
     System.out.println(maiorDuz);
 }
 
+//------------------------------------------------------------------------------------------------------------------
+
 // ATIVIDADE 05
 
-package br.unipar;
-
+// CLASSE CARRO
 import java.util.Scanner;
-
 
 class Carro {
 
@@ -160,6 +166,8 @@ class Carro {
         this.kilometragem = kilometragem;
     }
 }
+
+// CLASSE CARROTESTE -> UTILIZADA PARA REALIZAR TESTES PARA OS MÉTODOS
 
 public class CarroTeste {
     public static void main(String[] args) {
@@ -199,5 +207,119 @@ public class CarroTeste {
         System.out.println(carroTeste.kilometragem);
 
         System.out.printf("O veículo cadastrado é um %s modelo %s com um quantidade de %s KM rodados", carroTeste.marca, carroTeste.modelo, carroTeste.kilometragem);
+    }
+}
+
+//------------------------------------------------------------------------------------------------------------------
+
+// ATIVIDADE 06
+
+// CLASSE CONTABANCARIA
+public class ContaBancaria {
+
+    private double saldo;
+    private String numeroConta;
+
+
+    public double getSaldo(){
+        return saldo;
+    }
+
+    public String getNumeroConta(){
+        return numeroConta;
+    }
+
+
+    public void setSaldo(double saldo){
+        this.saldo = saldo;
+    }
+
+    public void setNumeroConta(String time){
+        this.numeroConta = numeroConta;
+    }
+
+    
+    public void depositar(double valor) {
+        this.saldo = saldo + valor;
+        System.out.printf("Valor de R$ %s depositado com suceso!", valor);
+    }
+
+    public void sacar(double valor) {
+        if (saldo > valor) {
+            this.saldo = saldo - valor;
+            System.out.printf("Valor %s sacado com sucesso!", valor);
+        }
+        else {
+            System.out.printf("Valor %s não pode ser sacadao pois excede a quantia do saldo.", valor);
+        }
+    }
+
+    public void consultarSaldo() {
+        System.out.printf("Seu saldo atual é de R$ %s ", getSaldo());
+    }
+}
+
+
+// CLASSE TESTE -> UTILIZADA PARA REALIZAR TESTES PARA OS MÉTODOS
+import java.util.Scanner;
+
+public class teste {
+    public static void main(String[] args) {
+
+        double saldoConta ;
+        String numeroContaTeste;
+        double valor;
+
+
+        int validador = 1;
+        int opcao;
+
+        ContaBancaria contaBancaria = new ContaBancaria();
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Informe o n° de sua conta:  ");
+        numeroContaTeste = scanner.next();
+        contaBancaria.setNumeroConta(numeroContaTeste);
+        System.out.println();
+        System.out.println("Informe o saldo atual da sua conta:  ");
+        saldoConta = scanner.nextDouble();
+        contaBancaria.setSaldo(saldoConta);
+        System.out.println();
+
+
+        while (validador == 1){
+
+            System.out.println("O que você gostaria de fazer?");
+            System.out.println("1 - Depositar");
+            System.out.println("2 - Sacar");
+            System.out.println("3 - Consultar saldo");
+            System.out.println("0 - Sair");
+            System.out.println();
+            opcao = scanner.nextInt();
+            System.out.println();
+
+
+            if (opcao == 1){
+                System.out.println("Qual valor você gostaria de depositar?");
+                valor = scanner.nextDouble();
+                contaBancaria.depositar(valor);
+                System.out.println();
+
+            } else if (opcao == 2){
+                System.out.println("Qual valor você gostaria de sacar?");
+                valor = scanner.nextDouble();
+                contaBancaria.sacar(valor);
+                System.out.println();
+
+            } else if (opcao == 3) {
+                contaBancaria.consultarSaldo();
+                System.out.println();
+
+            } else if ( opcao == 0){
+                System.out.println("Programa finalizado...");
+                validador = 0;
+            }
+        }
     }
 }
